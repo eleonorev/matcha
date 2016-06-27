@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1=title
+
+  div.loginbox
+    form(name="login", action="/suscribe/add", method="post")
+      input(type="text", name="user", placeholder="login")
+      input(type="text", name="prenom", placeholder="prenom")
+      input(type="mail", name="mail", placeholder="email")
+      input(type="password", name="pass", placeholder="password")
+      input(type="password", name="pass2", placeholder="repeat password")
+      input(type="submit", value="Sign up")
+      a(class="bouton", href="/") Sign in ?

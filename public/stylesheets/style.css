@@ -1,0 +1,243 @@
+@import url(https://fonts.googleapis.com/css?family=Courgette|Satisfy|Raleway:400,600,500italic|Poppins&effect=anaglyph);
+
+@font-face {
+  font-family: 'courgette';
+  src: url('https://fonts.googleapis.com/css?family=Satisfy&effect=anaglyph');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('https://fonts.googleapis.com/css?family=Poppins&effect=anaglyph');
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+a:focus {
+  color: #fff;
+}
+
+
+h2 {
+    font-weight: 100;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+#lapin{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 307px;
+  width: 350px;
+  border-bottom-left-radius: 100px;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+  opacity: 0.4;
+  z-index: -1;
+}
+#lapin img{
+  position: absolute;
+  right: -200px;
+  top: -80px;
+}
+#lapin2{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 307px;
+  width: 350px;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+  opacity: 0.4;
+  z-index: -1;
+
+}
+#lapin2 img{
+  position: absolute;
+  bottom: -50px;
+  left: -715px;
+}
+
+body {
+  width: 100vw;
+  font-family: 15px 'poppins', Helvetica, Arial, sans-serif;
+  background-color: #eee;
+  margin: auto;
+  font-weight: 200;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.title {
+  margin: auto;
+  display: block;
+  overflow: hidden;
+}
+
+header {
+  background-color: #9e9e9e;
+  height: 50px;
+  color: #fff;
+  line-height: 50px;
+  padding: 0 10vw;
+  box-shadow: 1px 0px 4px rgba(0,0,0,0.4);
+}
+
+header .logo {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5em;
+  z-index: 10;
+  font-family: 'poppins';
+  text-transform: uppercase;
+  margin-top: 5vw;
+  color: #B00025;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+.title h1 {
+  letter-spacing: -10px;
+}
+
+.loginbox {
+  display: block;
+  width: 400px;
+  height: auto;
+  background-color: #fff;
+  margin: auto;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.09);
+  padding: 50px;
+  z-index: -3;
+  text-align: center;
+}
+
+.loginbox input {
+  display: block;
+  margin: auto;
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: center;
+  height: 40px;
+  margin-top: 20px;
+  width: 350px;
+  z-index: 3;
+
+}
+.loginbox input[type="submit"] {
+  height: 40px;
+  background-color: #B00025;
+  border: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.5s ease;
+  z-index: 3;
+}
+
+.loginbox input[type="submit"]:hover {
+  color: #B00025;
+  border: 1px solid #bcbcbc;
+  background-color: #fff;
+}
+
+input:focus {
+    outline: none;
+}
+
+.forgot {
+  display: block;
+  color: #bcbcbc;
+  font-family: 'poppins';
+  padding: 10px;
+  text-decoration: underline;
+}
+
+.forgot:hover {
+  color: #B00025;
+}
+
+.bouton {
+  display: block;
+  color: #bcbcbc;
+  font-family: 'poppins';
+  padding: 5px 10px;
+  width: 330px;
+  margin: auto;
+}
+
+.bouton:hover {
+    color: #B00025;
+}
+
+#profile {
+  display:flex;
+  width: 80vw;
+  background-color: white;
+  margin: auto;
+  margin-top: 80px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.09);
+}
+
+#profile .login {
+  font-size: 2.4em;
+  text-align: center;
+}
+
+#profile #infos {
+  display: block;
+  width: 40%;
+  float: left;
+}
+
+#profile #infos span {
+  display: flex;
+  padding: 0px 20px;
+}
+
+#profile #biographie {
+  display: block;
+  float: left;
+  width: 60%;
+  padding-right: 50px;
+}
+
+#profile #biographie .tag {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+#profile .pp {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+#profile .pp img {
+  display: flex;
+  align-content: center;
+  min-width: 200px;
+  min-height: 200px;
+  width: 140%;
+}
+
+
+
+span.hash {
+  background-color: #E8AEBA;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}

@@ -1,0 +1,27 @@
+extends layout
+
+block content
+
+  if type
+    h1 Search
+    each user in users
+      p=user.login
+
+  else
+    div#profile
+      div#infos
+        span(class="login")= title
+        div(class="pp")
+          img(src="http://toddhancock.ca/wp-content/uploads/2015/08/jimi-hendrix-juan-jose-espinoza.jpg")
+        span(class="age") 24
+        span(class="sexe") Homme
+        span(class="orientation") intéressé(e) par : Femme
+      div#biographie
+        h2 Biographie
+        p(class="bio") James Marshall Hendrix (né Johnny Allen Hendrix le 27 novembre 1942 à Seattle, aux États-Unis, et mort le 18 septembre 1970 à Londres, en Angleterre), mieux connu sous le nom de Jimi Hendrix, est un guitariste, auteur-compositeur et chanteur américain, fondateur du groupe anglo-américain The Jimi Hendrix Experience, actif de 1966 à 1970. Malgré une carrière internationale longue de seulement quatre ans, il est considéré comme le plus grand joueur de guitare électrique et l'un des musiciens les plus importants du xxe siècle.
+        h2 Interêt
+        span(class="tag")
+          span.hash #pomme
+          span.hash #ananas
+          span.hash #prune
+          span.hash #fraise
