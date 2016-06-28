@@ -1,25 +1,36 @@
 var express = require('express');
 var router = express.Router();
 var connection = require('../db');
-
+var app = express();
 /* GET users listing. */
 
-router.get('/', function(req, res, next) {
-    var log = req.user;
-    var query = 'SELECT * FROM users';
-    connection.query(query, function(err, rows){
-      res.render('users', {type : 1, users : rows});
+router.post('/', function(req, res, next) {
+    var login = req.body.user;
+    var password = req.body.pass;
+    var crypto = require('crypto');
+
+    if (login && password) {
+      var query = 'SELECT * FROM users WHERE login = ?';
+      var result = connection.query(query, login, function(err, rows) {
+        if (!rows[0])
+          res.render('index', {error: 'user not found'});
+        else {
+          var pass = crypto.createHash('md5').update(password).digest('hex');
+          if (pass === rows[0].pass) {
+            res.render('users', {users : rows[0].login});
+            req.session.login = rows[0].login;
+            console.log(req.session);
+          }
+          res.render('index', {error: 'wrong password'});
+        }
+    });
+  }
+  else
+    res.render('index', {users: 'user not found'});
 });
 
-});
 
-router.get('/suscribe', function(req, res) {
-    res.render('suscribe', {title : 'Sign Up !' });
-});
 
-router.post('/suscribe/add', function(req, res) {
-  console.log(req);
-});
 
 router.get('/:login', function(req, res) {
     var user = req.params.login;

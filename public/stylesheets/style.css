@@ -61,6 +61,8 @@ h2 {
   left: -715px;
 }
 
+
+
 body {
   width: 100vw;
   font-family: 15px 'poppins', Helvetica, Arial, sans-serif;
@@ -186,6 +188,7 @@ input:focus {
   background-color: white;
   margin: auto;
   margin-top: 80px;
+  padding-bottom: 30px;
   box-shadow: 1px 1px 4px rgba(0,0,0,0.09);
 }
 
@@ -198,11 +201,15 @@ input:focus {
   display: block;
   width: 40%;
   float: left;
+  text-align: center;
+  height: auto;
 }
 
 #profile #infos span {
   display: flex;
   padding: 0px 20px;
+  width: 100%;
+  text-align: center;
 }
 
 #profile #biographie {
@@ -233,7 +240,33 @@ input:focus {
   width: 140%;
 }
 
+#profile .bio {
+  text-align: justify;
+}
 
+p.error {
+  margin: 30px auto;
+  text-align: center;
+  color: red;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  width: 400px;
+  border: 1px solid red;
+  padding: 5px;
+}
+
+p.error:before {
+  content: 'Error : ';
+}
+
+p.success {
+  margin: 30px auto;
+  text-align: center;
+  color: green;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  width: 400px;
+  border: 1px solid green;
+  padding: 5px;
+}
 
 span.hash {
   background-color: #E8AEBA;

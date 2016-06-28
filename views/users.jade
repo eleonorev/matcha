@@ -3,14 +3,12 @@ extends layout
 block content
 
   if type
-    h1 Search
-    each user in users
-      p=user.login
+    h1=title
 
   else
     div#profile
       div#infos
-        span(class="login")= title
+        span(class="login")= users
         div(class="pp")
           img(src="http://toddhancock.ca/wp-content/uploads/2015/08/jimi-hendrix-juan-jose-espinoza.jpg")
         span(class="age") 24
