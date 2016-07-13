@@ -88,6 +88,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `pop` float DEFAULT NULL,
   `birthdate` date DEFAULT NULL,
   `location` varchar(200) DEFAULT NULL,
+  `prenom` varchar(200) DEFAULT NULL,
+  `nom` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
