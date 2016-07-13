@@ -18,14 +18,16 @@ app.set('view engine', 'jade');
 
 
 app.use(bodyParser.json());
-app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({
+var session = app.use(session({
   secret: 'secret',
   name: 'session',
-  resave: true,
-  saveUninitialized: true
+  duration: 30 * 60 * 1000,
+ activeDuration: 5 * 60 * 1000,
+ httpOnly: true,
+ secure: true,
+ ephemeral: true
 }));
 
 
@@ -80,3 +82,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+module.exports = session;

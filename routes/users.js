@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var connection = require('../db');
 var app = express();
-/* GET users listing. */
 
 router.post('/', function(req, res, next) {
     var login = req.body.user;
@@ -33,7 +32,6 @@ router.post('/', function(req, res, next) {
 
 
 router.get('/:login', function(req, res) {
-    var user = req.params.login;
     res.render('users', {title : user});
 });
 

@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var connection = require('../db');
-var session = require('express-session');
 
 
 /* GET home page. */
