@@ -8,12 +8,10 @@ block content
   if success
     p.success=success
 
-
-  if !type
-    div.loginbox
-      form(name="login", action="/users", method="post")
-        input(type="text", name="user", placeholder="login")
-        input(type="password", name="pass", placeholder="password")
-        input(type="submit", value="login")
-      a(class="forgot", href="/forgot") Forgot password ?
-      a(class="bouton", href="/suscribe") Sign up ?
+  div.loginbox
+    form(name="login", action="/users", method="post")
+      input(type="text", name="user", placeholder="login")
+      input(type="password", name="pass", placeholder="password")
+      input(type="submit", value="login")
+    a(class="forgot", href="/forgot") Forgot password ?
+    a(class="bouton", href="/suscribe") Sign up ?

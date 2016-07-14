@@ -37,6 +37,7 @@ app.use('/suscribe', suscribe);
 
 
 
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -53,8 +54,6 @@ connection.query('SELECT * from users', function(err, rows, fields) {
   else
     console.log('Error while performing Query.', err);
 });
-
-
 
 
 // error handlers

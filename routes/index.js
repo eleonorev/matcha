@@ -4,22 +4,35 @@ var connection = require('../db');
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-    var type = 0;
-    if (req.session.login)
-      type = 1;
-    console.log(type);
-    res.render('index', {title : 'Matcha', users : type});
-    console.log(req.session);
 
+
+router.get('/', function(req, res, next) {
+    var sess = req.session;
+    console.log(req.session);
+    res.locals.login = req.session.login;
+    if (res.locals.login) {
+      res.render('users', sess);
+      res.end()
+      return;
+    }
+    res.render('index', sess);
+    res.end()
+    return;
 });
 
 router.get('/login', function(req, res, next) {
-    res.render('index', {title : 'Matcha'});
+    res.render('index');
 });
 
 router.get('/lol', function(req, res, next) {
     res.render('users', {title : 'coucou'});
+});
+
+router.get('/logout', function(req, res, next) {
+  req.session.destroy();
+  console.log(req.session);
+  res.render('index');
+
 });
 
 

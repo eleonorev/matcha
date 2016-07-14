@@ -274,3 +274,12 @@ span.hash {
   padding: 5px;
   margin: 5px;
 }
+
+.delog {
+  float: right;
+  background-color: rgba(0,0,0,0.2);
+  margin-top: 10px;
+  line-height: 20px;
+  padding: 5px 20px;
+  color: white;
+}
