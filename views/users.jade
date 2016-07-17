@@ -1,17 +1,16 @@
 extends layout
 
 block content
-
-  if type
-    h1=title
-
-  else
+    div#profileinfos
+      i.fa.fa-chevron-left
+      i.fa.fa-chevron-right
+      p.login=locals.login
+      div(class="pp")
+        img(src="http://toddhancock.ca/wp-content/uploads/2015/08/jimi-hendrix-juan-jose-espinoza.jpg")
     div#profile
       div#infos
         span(class="login")=locals.login
-        div(class="pp")
-          img(src="http://toddhancock.ca/wp-content/uploads/2015/08/jimi-hendrix-juan-jose-espinoza.jpg")
-        span(class="age") 24
+            span(class="age") 24
         span(class="sexe") Homme
         span(class="orientation") intéressé(e) par : Femme
       div#biographie
